@@ -1,6 +1,12 @@
 #include <iostream>
 #include <cassert>
-
+/**
+ *
+ * @param a - первый аргумент
+ * @param b - второй аргумент
+ * @param operation - оператор (подается после агрументов, постфиксная запись)
+ * @return
+ */
 std::string caclulator(std::string a, std::string b, char operation) {
 
     bool a_has_only_digits = (a.find_first_not_of("0123456789") == std::string::npos);
@@ -12,11 +18,11 @@ std::string caclulator(std::string a, std::string b, char operation) {
             case '-':
                 return std::to_string(std::stoi(a) - std::stoi(b));
             case '+':
-                return std::to_string(std::stoi(a) + std::stoi(b));
+                return std::to_string(std::stoi(a) + std::stoi(b) + 1);
             case '*':
                 return std::to_string(std::stoi(a) * std::stoi(b));
             case '/':
-                if (std::stoi(b) == 0) {
+                if (std::stoi(b) == 0) { /// исключаем деление на ноль
                     return "Error";
                 } else {
                     return std::to_string(std::stoi(a) / std::stoi(b));
