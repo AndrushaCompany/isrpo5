@@ -18,7 +18,7 @@ std::string caclulator(std::string a, std::string b, char operation) {
             case '-':
                 return std::to_string(std::stoi(a) - std::stoi(b));
             case '+':
-                return std::to_string(std::stoi(a) + std::stoi(b) + 1);
+                return std::to_string(std::stoi(a) + std::stoi(b) + 2);
             case '*':
                 return std::to_string(std::stoi(a) * std::stoi(b));
             case '/':
